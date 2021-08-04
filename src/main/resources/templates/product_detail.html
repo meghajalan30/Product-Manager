@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Product Details</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+
+        </div>
+
+    </div>
+</nav>
+
+<br/>
+<br/>
+<br/>
+<div class="container">
+    <div>
+
+        <img th:src="${product.image}" style="width:400px;height:400px"><br><br>
+        <h1 th:text="${product.name}"></h1><br>
+        <div>
+            Brand: <span th:text="${product.brand}"></span>
+        </div><br>
+        <div>
+            Made In: <span th:text="${product.madein}"></span>
+        </div><br>
+        <div>
+            Price: <span th:text="${product.price}"></span>
+        </div><br>
+        <div>
+            Description: <span th:text="${product.description}"></span>
+        </div>
+        <br />
+
+    </div>
+
+<script type="text/javascript"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>
+
